@@ -1,6 +1,6 @@
 # Requirements coverage
 
-Status of each item in `public/AUC delivery & digital queue website.pdf` for Milestone 1.
+Status of each item in [the requirements reference](reference/requirements-reference.pdf) for Milestone 1.
 
 **Met** means it works in the demo. **Simulated** means the journey works with a labeled mock in place of the external service, as the document allows. **Milestone 2** means it needs the backend.
 

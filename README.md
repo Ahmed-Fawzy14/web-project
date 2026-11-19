@@ -2,10 +2,12 @@
 
 A campus food queue and student delivery platform for AUC. This is the Milestone 1 frontend. It covers the customer, courier, restaurant and admin journeys using fictional mock data, with no backend.
 
+**[Open the live demo](https://web-project-beige-seven.vercel.app/#/login)**
+
 ## Run it
 
 1. Install Node.js 24 LTS and Git (`.nvmrc` selects Node 24).
-2. Clone the repository and open the project folder.
+2. Clone `https://github.com/Ahmed-Fawzy14/web-project.git` and open the project folder.
 3. Run `npm ci`.
 4. Run `npm run dev`, then open the local URL it prints, normally http://localhost:5173.
 
@@ -37,26 +39,27 @@ Use the **Demo role** bar at the top to switch roles, or sign in on the login pa
 
 Exact versions are pinned in `package.json` and `package-lock.json`.
 
-## Netlify deployment
+## Vercel deployment
 
-Import `Ahmed-Fawzy14/web-project` from GitHub into Netlify, using the repository root
-as the base directory and `main` as the production branch. The committed
-`netlify.toml` sets Node 24, build command `npm run build`, and publish directory
-`dist`. No environment variables or backend services are required for this demo.
+The frontend is live at **[web-project-beige-seven.vercel.app](https://web-project-beige-seven.vercel.app/#/login)**.
+Import `Ahmed-Fawzy14/web-project` from GitHub into Vercel and use `main` for production.
 
-The default build serves assets from `/`. Hash routes, such as `/#/orders`, work
-with direct links and refreshes on static hosting without a rewrite rule.
-For a manual Netlify upload, run `npm run build` and upload the **dist folder**.
-Do not upload the source folder or run the Vite development server on Netlify.
+| Setting | Value |
+| --- | --- |
+| Framework | Vite |
+| Root directory | Repository root (`./`) |
+| Node.js | 24.x |
+| Install command | `npm ci` |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Environment variables | None |
 
-## GitHub Pages deployment
+`vercel.json` records the framework and build settings. Assets are served from
+`/`, and hash routes such as `/#/orders` support direct links and refreshes
+without a rewrite rule. No backend services are required for this demo.
 
-The GitHub Pages target is https://Ahmed-Fawzy14.github.io/web-project/.
-Pushes to `main` automatically build and deploy through `.github/workflows/deploy.yml`.
-The Pages workflow builds with `--base=/web-project/`, and hash routes (for example,
-`/web-project/#/orders`) allow direct links and refreshes on GitHub Pages.
-Local development and Netlify use `/`; only the Pages workflow uses `/web-project/`.
-Enable GitHub Actions as the Pages source in repository settings before deploying.
+To preview a production build locally, run `npm run build` followed by
+`npm run preview`, then open the printed URL.
 
 ## Browser tests and submission screenshots
 
@@ -76,6 +79,7 @@ failed HTTP responses. Backend tests remain Milestone 2 work.
 Screenshots at 375, 768, and 1440 px and extra workflow evidence are saved in
 `docs/evidence/screenshots/`. The dated run report is in
 [docs/evidence/TEST-RESULTS.md](docs/evidence/TEST-RESULTS.md).
+The recorded run contains **24 passing browser tests** and **21 screenshots**.
 The interactive HTML report is generated in `playwright-report/` (not committed).
 
 ## Persistence and reset
@@ -106,5 +110,9 @@ Nothing below connects to a live service, and each is labeled in the interface.
 | `src/components` | Reusable UI |
 | `src/pages` | Route views for each role |
 | `src/styles/theme.css` | Bootstrap theme and brand colors |
+| `tests` | Playwright browser scenarios |
+| `scripts` | Test evidence reporting |
+| `docs/evidence` | Dated test results and submission screenshots |
+| `docs/reference` | Original requirements PDF and wireframe reference |
 
 See [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) for how each requirement is covered.

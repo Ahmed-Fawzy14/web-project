@@ -56,7 +56,7 @@ AC-01 through AC-07 have frontend evidence across T04/T05/T23, T06/T07/T19, T17/
 
 - Mobile checkout summary inherited a desktop top offset, leaving a gap and overlapping the footer. Restricted the offset to the desktop breakpoint; recaptured the mobile/tablet screenshots.
 - The skip-to-content anchor conflicted with hash routing. It now focuses a focusable main element without changing route; T23 verifies keyboard activation.
-- Netlify builds inherited GitHub Pages’ repository subpath. Default builds now use root assets; the Pages workflow alone specifies /web-project/.
+- Static deployment initially inherited GitHub Pages’ repository subpath. Production builds now use root asset paths, including the current Vercel deployment.
 
 ## Screenshots
 
