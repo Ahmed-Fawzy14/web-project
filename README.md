@@ -37,6 +37,14 @@ Use the **Demo role** bar at the top to switch roles, or sign in on the login pa
 
 Exact versions are pinned in `package.json` and `package-lock.json`.
 
+## GitHub Pages deployment
+
+The frontend is hosted at https://aly0xx.github.io/web-project/.
+Pushes to `main` automatically build and deploy through `.github/workflows/deploy.yml`.
+Vite serves assets under `/web-project/`, and hash routes (for example,
+`/web-project/#/orders`) allow direct links and refreshes on GitHub Pages.
+Local development uses the URL printed by `npm run dev`, including `/web-project/`.
+
 ## Persistence and reset
 
 Demo state is saved in this browser's `localStorage`, so it survives a refresh. **Demo controls > Reset all demo data** restores the original data and signs you out. Uploaded ID files are never stored, only their file names.
