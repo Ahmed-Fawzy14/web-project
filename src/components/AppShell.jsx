@@ -167,7 +167,10 @@ export function AppShell() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      <a className="visually-hidden-focusable" href="#main">Skip to content</a>
+      <a className="visually-hidden-focusable" href="#main" onClick={(event) => {
+        event.preventDefault();
+        document.getElementById('main')?.focus();
+      }}>Skip to content</a>
       <DemoBar activeRole={activeRole} />
       <nav className="navbar navbar-expand-md bg-white border-bottom sticky-top" aria-label="Main">
         <div className="container-xl">
@@ -207,7 +210,7 @@ export function AppShell() {
           </div>
         </div>
       </nav>
-      <main id="main" className="container-xl flex-grow-1 py-4">
+      <main id="main" tabIndex={-1} className="container-xl flex-grow-1 py-4">
         <Outlet />
       </main>
       <footer className="border-top py-3 text-center small text-body-secondary">

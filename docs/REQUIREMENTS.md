@@ -29,10 +29,13 @@ Status of each item in `public/AUC delivery & digital queue website.pdf` for Mil
 
 | ID | Result |
 | --- | --- |
-| AC-01 to AC-07 | Passed in a browser run |
-| T01 to T07 | Passed in a browser run |
+| AC-01 to AC-07 | Representative frontend coverage in the dated Playwright evidence |
+| T01 to T07 | Passed with Playwright on 19 November 2026; T03 checked at all three widths |
 | T08 to T11 | Milestone 2, these need the backend |
-| T12 to T14 | Passed in a browser run |
+| T12 to T14 | Passed with Playwright on 19 November 2026 |
+
+See [the test report](evidence/TEST-RESULTS.md) for all 24 executed scenarios,
+actual results, test conditions, known limits, and 21 submission screenshots.
 
 ## Known limits
 

@@ -211,7 +211,10 @@ a:focus-visible, button:focus-visible, .btn-check:focus-visible + .btn {
 
 .stepper { width: auto; flex-wrap: nowrap; }
 
-.checkout-summary { top: 84px; z-index: 1; }
+.checkout-summary { z-index: 1; }
+@media (min-width: 992px) {
+  .checkout-summary { top: 84px; }
+}
 .justify-self-start { justify-self: start; }
 
 .cart-bar { position: sticky; bottom: 14px; z-index: 10; }

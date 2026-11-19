@@ -1,4 +1,8 @@
 node_modules
 dist
+dist-pages/
 *.local
 .DS_Store
+playwright-report/
+test-results/
+.netlify/
