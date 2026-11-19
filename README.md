@@ -39,7 +39,7 @@ Exact versions are pinned in `package.json` and `package-lock.json`.
 
 ## Netlify deployment
 
-Import `aly0xx/web-project` from GitHub into Netlify, using the repository root
+Import `Ahmed-Fawzy14/web-project` from GitHub into Netlify, using the repository root
 as the base directory and `main` as the production branch. The committed
 `netlify.toml` sets Node 24, build command `npm run build`, and publish directory
 `dist`. No environment variables or backend services are required for this demo.
@@ -51,7 +51,7 @@ Do not upload the source folder or run the Vite development server on Netlify.
 
 ## GitHub Pages deployment
 
-The GitHub Pages target is https://aly0xx.github.io/web-project/.
+The GitHub Pages target is https://Ahmed-Fawzy14.github.io/web-project/.
 Pushes to `main` automatically build and deploy through `.github/workflows/deploy.yml`.
 The Pages workflow builds with `--base=/web-project/`, and hash routes (for example,
 `/web-project/#/orders`) allow direct links and refreshes on GitHub Pages.
